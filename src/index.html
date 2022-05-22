@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Smart university</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid white;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="overlay"></div>
+    <div id="step1" onclick="goToStep2()">
+      <div class="card">
+        <h1>Scan your student ID Card</h1>
+        <img width="200" src="./assets/images/rfid.png" alt="RFID CARD">
+      </div>
+    </div>
+    <div id="step2" style="display: none">
+      <div class="card">
+        <h1>Choose your destenation</h1>
+        <div class="card-grid" onclick="goToStep3()">
+          <div class="custom-button">
+            <h1>J1</h1>
+            <h4>Al Jurf 1</h4>
+          </div>
+          <div class="custom-button">
+            <h1>J2</h1>
+            <h4>Al Jurf 2</h4>
+          </div>
+          <div class="custom-button">
+            <h1>Sport Complex</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="step3" style="display: none">
+      <div class="card">
+        <h1>Pick scrooter: No 3</h1>
+        <h1>Time left: 5:00 Mintues</h1>
+        <p>Charge 81%</p>
+      </div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
